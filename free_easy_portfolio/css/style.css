@@ -1,0 +1,350 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    /*данное свойство сглаживает шрифты*/
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+    /* margin: 0 0 10px 0; */
+}
+
+/* container---------------------------------------------*/
+.container{
+    width: 65%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header------------------------------------------- */
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.header__inner{
+    /* чтобы padding & maring входили в
+    width & height, а не считались отдельно */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    height: 90px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+
+    border-bottom: 1px solid #828282;
+}
+
+/* Navigatin----------------------------------------- */
+.nav{
+    widows: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__link{
+    font-size: 18px;
+    font-weight: 700;
+    color: #828282;
+    text-decoration: none;
+
+    transition: color 0.15s linear;
+}
+.nav__link:hover{
+    color: #000;
+}
+/* Intro--------------------------------------------- */
+.intro{
+    /* padding чтобы отступить на 90px от header 
+    + 40 px для блока*/
+    padding-top: 130px;
+    height: 760px;
+}
+.intro__text{
+    width: 100%;
+    height: 95px;
+    margin-bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+.intro__text__name{
+    /* ЕСЛИ В ТЕКСТЕ НЕТ ПРОБЕЛОВ, ТО ОН НЕ БУДЕТ
+    ПЕРЕНЕСЕН */
+    /* если текст выходит за рамки, то свойство
+    ниже перенесет часть текста, выходящего за блок,
+    на новую строчку*/
+    /* word-wrap: break-word;  */
+    width: 140px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+}
+.intro__text__info{ 
+    width: 165px;
+    text-align: left;
+    padding-top: 45px;
+}
+.intro__text__info__inner{
+    font-weight: 400;
+    font-size: 18px;
+}
+.intro__text__language{
+    /* flex - чтобы было удобнее выравнивать
+    перевернутый блок */
+    display: flex;
+    justify-content: center;
+    height: 18px;
+    width: 88px;
+    /* перевернем текст на 90 против часовой стрелки */
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+} 
+.intro__text__language__choose{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    color: #828282;
+    text-decoration: none;
+    border-right: solid 2px #000;
+    padding-right: 11px;
+    padding-left: 8px;
+    transition: color 0.15s linear;
+}
+/* .intro__text__language__choose:first-child{
+    padding-left: 0;
+} */
+.intro__text__language__choose:last-child{
+    border-right: none;
+    padding-right: 0;
+    padding-left: 8px;
+}
+.intro__text__language__choose:hover{
+    color: #000;
+}
+.intro__pict{
+    width: 100%;
+    height: 387px;
+    background: rgb(82, 79, 79) url("../img/intro_photo.jpg") no-repeat center /cover;
+}
+/* About me--------------------------------------------- */
+.about__me{
+    width: 485px;
+    height: 280px;
+    margin: 0 auto;
+}
+.about__me__box{
+    height: 510px;
+    padding: 120px 0 105px;
+    background-color: #F6F6F6;
+}
+.about__me__title{
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 34px;
+}
+.about__me__text{
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 50px;
+}
+/* Skills--------------------------------------------- */
+.skills__inner{   
+    padding-top: 90px;
+    padding-bottom: 110px;
+    height: 620px;
+}
+.skills__inner__title{
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 67px;
+}
+.skills__inner__text{
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 90px;
+}
+.skills__inner__programs{
+    width: 100%;
+    display: flex;
+}
+.skills__inner__program{
+    width: 25%;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.skills__inner__program__pict{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+}
+.skills__inner__program__name{
+    width: 71px;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    line-height: 1;
+    color: #828282;
+}
+/* skills__inner__program__name_aa это для того, чтобы
+сделать нормальные две строки для Adobe AFter Effects */
+.skills__inner__program__name__aa{
+    width: 80px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1;
+    color: #828282;
+}
+.skills__inner__program__name__aa__2{
+    width: 80px;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    line-height: 1;
+    color: #828282;
+}
+/* Чтобы блок текста нормально отображался */
+.skills__inner__program__name_figma{
+    width: 71px;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    line-height: 1;
+    color: #828282;
+    height: 28px;
+}
+/* ПОСМОТРЕТЬ КАК СДЕЛАТЬ С SVG  */
+.skills__inner__program__rating{
+    margin: 0 auto;
+    /* height: 30px; */
+}
+/* Skills--------------------------------------------- */
+.portfolio__box{
+    /* box-sizing: border-box; */
+    background-color: #F6F6F6;
+    width: 100%;
+}
+.portfolio__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio__title{
+    width: 158px;
+    padding-top: 113px;
+    padding-bottom: 47px;
+    font-size: 34px;
+    line-height: 1;
+}
+.portfolio__example{
+    width: 100%;
+    /* 575+100px на padding-bottom */
+    max-height: 675px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+/* посмотреть работу с кртинками, чтобы она растягивалась 
+на ширину блока */
+.portfolio__example__img{
+    /* max-width: 1136px; */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 45px;
+}
+.portfolio__example__ref{
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1;
+}
+.portfolio__example__ref:hover{
+    text-decoration: underline;
+}
+.portfolio__example:last-child{
+    margin-bottom: 0;
+    padding-bottom: 100px;
+}
+/* Contacts --------------------------------------------- */
+.contacts__inner{
+    margin-top: 115px;
+}
+.contacts__title{
+    font-size: 34px;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.contacts__text{
+    max-width: 276px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 35px;
+}
+.contacts__ref__box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contacts__button{
+    font-size: 18px;
+    line-height: 1;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 14px 29px;
+    border-radius: 35px;
+    margin-bottom: 80px;
+
+    transition: background-color linear .15s;
+}
+.contacts__button:hover{
+    background-color:#3a3838;
+}
+.contacts__icons{
+    margin: 0 auto 45px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 342px;
+    height: 41px;
+}
+.contacts__follow{
+    margin: 0 auto 120px;
+    max-width: 244px;
+    text-align: center;
+    /* margin-bottom: 120px; */
+    font-size: 14px;
+    line-height: 1;
+    color: #828282;
+}

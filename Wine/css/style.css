@@ -1,0 +1,679 @@
+/*Wine landing*/
+/*Montserrat : medium; regular; semi bold + playfair display: regular*/
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;*/
+
+body {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+
+    /*данное свойство сглаживает шрифты*/
+    -webkit-font-smoothing: antialiased;
+
+    background-color: #ffffff;
+
+}
+h1,h2,h3,h4,h5,h6,p,td,tr {
+    margin: 0;
+    padding: 0;
+}
+
+/*container ==================================*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*header =====================================*/
+.header{
+    width: 100%;
+    /* при 100px, высота  header__inner больше чем у header*/
+    /* height: 100px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__contacts{
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    padding: 34px 0 20px 0;
+}
+
+.header__menu{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #fff;
+}
+.menu__nav{
+    color: #fff;
+    text-decoration: none;
+    border-right: 2px;
+    border-color: #fff;
+
+    line-height: 21px;
+
+    height: 45px;
+    width: 299px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-right: solid 1px #fff;
+    /*для плавного изменения цвета задника при наведении*/
+    transition: background .15s linear;
+}
+
+.menu__nav:last-child{
+    /* border-right: none; */
+    border-color:transparent;
+}
+
+.menu__nav:hover{
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Intro---------------------------------------------------------*/
+
+.intro{
+    width: 100%;
+    height: 900px;
+    background: rgb(34, 111, 199) url("../img/bgc.jpg") no-repeat center /cover;
+}
+
+.intro__buttons{
+    padding-top: 700px;
+    /* без указания max ширины блок растягивается на 100% как и родитель
+    container */
+    max-width: 430px;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+}
+
+.inner_button{
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    color:#fff;
+    display: flex;
+    /* чтобы текст был в середине блока */
+    justify-content: center;
+    align-items: center;
+
+    line-height: 20px;
+    letter-spacing: 0.05em;
+
+    background-color: #998431;
+
+    transition: background 0.15s linear;
+}
+
+.inner_button:hover{
+    background-color: #413712;
+}
+
+/* presentation---------------------------------------------------------*/
+.presentation{
+    background-color: #000;
+    width: 100%;
+    height: 860px;
+}
+
+.presentation__inner{
+    display: flex;
+    /* выравнивание по горизонтали */
+    justify-content: center;
+    /* выравнивание по вертикали */
+    align-items: center;
+    height: 860px;
+}
+
+.presentation__box {
+    width: 100%;
+    max-width: 1100px;
+    height: 650px;
+    border: 1px solid #fff;  
+}
+
+.presentation__container{
+    width: 100%;
+    max-width: 730px;
+
+    /* margin снизу,чтобы вровнять весь блок по центру */
+    margin: auto;
+}
+.presentation__title{
+    max-height: 93px;
+    padding-top: 57px;
+    
+}
+.title__text{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+/* псевдоэлемент для создания нижнего подчеркивания */
+.presentation__title::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 160px;
+    background-color: #fff;
+
+    margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentation__text{
+    margin-top: 45px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+}
+.picture__glass{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 160px;
+    margin-top: 52px;
+}
+
+/* collection-------------------------------------- */
+.collection {
+    background-color: #E6E3C4;
+    height: 1040px;
+    display: flex;
+    /*выравнивание по вертикали*/
+    align-items: center;
+}
+
+
+.collection__inner{
+    display: flex;
+    
+    
+    height: 880px;
+    border-top: solid 1px #998431;
+    border-bottom: solid 1px #998431;
+}
+
+.collection__info{
+    width: 50%;
+    /* background-color: #fff; */
+}
+.collection__abstract{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 61px;
+}
+.collection__title{
+    margin-top: 45px;
+    font-family: Playfair Display;
+    max-width: 288px;
+    font-size: 36px;
+    line-height: 1.5;
+}
+.collection__title::after{
+    content: "";
+    margin-top: 29px;
+    display: block;
+    background-color: #000;
+    height: 1px;
+    width: 160px;
+}
+
+.collection__text{
+    line-height: 1.5;
+    margin-top: 30px;
+    max-width: 445px;
+}
+
+/* table------- */
+.collection__table{
+    margin-top: 34px;
+    width: 445px;
+    height: 225px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.table__line{
+    width: 445px;
+    height: 45px;
+}
+.table__year{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
+}
+.table__year__last{
+    /* при реализации снизу появляется непонятный
+    margin */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    border-right: solid 1px #000;
+}
+
+.table__text{
+    padding-left: 27px;
+    border-bottom: 1px solid #000;
+}
+.table__text__last{
+    padding-left: 27px;
+}
+
+.table__text__last::before{
+    margin-bottom: 10px;
+    content: "Colli Euganei Bianco Ca' Lustra 1980";
+    font-family: Playfair Display;
+    font-size: 18px;
+    line-height: 1.5;
+    display: block;
+}
+.table__text::before{
+    margin-bottom: 10px;
+    content: "Colli Euganei Bianco Ca' Lustra 1980";
+    font-family: Playfair Display;
+    font-size: 18px;
+    line-height: 1.5;
+    display: block;
+}
+
+/* /table------- */
+.collection__button{
+    margin-top: 34px;
+    width: 254px;
+    height: 50px;
+}
+.collection__button__ref{
+    /* без дисплей flex bckg будет по размеру 
+    не больше текста в ссылке */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 254px;
+    height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #998431;
+    letter-spacing: 0.05;
+    transition: background 0.15s linear;
+}
+.collection__button__ref:hover{
+    background-color: #413712;
+}
+
+.collection__photo{
+    width: 50%;
+}
+
+.main_photo{
+    display: block;
+    
+    margin-top: 60px;
+    margin-left: 60px;
+    width: 540px;
+    height: 500px;
+}
+.two__photos{
+    
+    margin-top: 30px;
+    margin-left: 60px;
+    height: 228px;
+    width: 100%;
+    min-width: 255px;
+    max-width: 540px;
+
+    display: flex; 
+    justify-content: space-between;
+}
+/* тест */
+.test{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    /* при 100px, высота  header__inner больше чем у header*/
+    /* height: 100px; */
+    position: absolute;
+    /* 0px - header
+    900px - inner 
+    860px - presentation
+    1040px - collection*/
+    top: 2800px;
+    left: 500px;
+}
+
+/* regitration---------------------------------------- */
+.registration{
+    /* если задать данный posiition, то корректно
+    работает margin-top */
+    position: absolute;
+    width: 100%;
+    height: 770px;
+    background-color: #282828;
+}
+.registration__inner{
+    box-sizing: border-box;
+    margin-top: 130px;
+    width: 100%;
+    height: 530px;
+    border: solid 3px #fff;
+}
+.registration__inner__text{
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 540px;
+    height: 120px;
+}
+
+.registration__inner__text::before{
+    content: "";
+    display: block;
+    width: 118px;
+    height: 1px;
+    background-color: #fff;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.registration__inner__form{
+    width: 540px;
+    height: 210px;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+/* registr form == Wine form*/
+fieldset,input {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.registr__form{
+    background-color: #282828;
+    max-width: 540px;
+    width: 100%;
+    height: 100%;
+}
+.registr__form__content{
+    width: 255px;
+    height: 70px;
+}
+
+.wine__form{
+    box-sizing: border-box;
+    /* 270px с учетом, что 60px на отступ с помощью padding 
+    при этом все проценты надо пересчитывать!!!*/
+    height: 270px;
+    width: 540px;
+    padding-left: 327px;
+    padding-top: 60px;
+    background-color: #282828;
+}
+.wine__fieldset{
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* background-color: #000;
+    color: #fff; */
+}
+.wine__first__line{
+    width: 100%;
+    max-width: 540xp;
+    height: 20%;
+    min-height: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+/* Для изменения цвета placeholder */
+/* ниже для мозилы */
+input::-moz-placeholder { color: #fff; }
+/* для хрома и сафари */
+input::-webkit-input-placeholder { color: #fff; }
+
+.wine__input__text{
+    font-size: 13px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    /* padding-top - чтобы было нужно расстояние внутри
+    блока от текста до границы снизу */
+    padding-top: 15px;
+    width: 47%;
+    /* надо учесть -4px на стандартные padding */
+    max-width: 251px;
+    height: 20%;
+    min-height: 55px;
+    border: none;
+    /* убирает обводку при нажатии на поле */
+    outline: none;
+    background-color: #282828;
+    color: #fff;
+    border-bottom: solid 1px #fff;
+}
+.wine__input__text__full{
+    font-size: 13px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    /* padding-top - чтобы было нужно расстояние внутри
+    блока от текста до границы снизу */
+    padding-top: 15px;
+    width: 100%;
+    height: 20%;
+    min-height: 55px;
+    /* надо учесть -4px на стандартные padding */
+    min-width: 536px;
+    border: none;
+    /* убирает обводку при нажатии на поле */
+    outline: none;
+    background-color: #282828;
+    color: #fff;
+    border-bottom: solid 1px #fff;
+}
+/* костыль, помогающий сделать расстояние между секциями
+тк иначе границы накладываются друг на друга
+из-за него нужно делать перерасчет всех высот!!! */
+.place_holder{
+    width: 100%;
+    min-width: 540px;
+    height: 19%;
+    min-height: 50px;
+    background-color: #282828;
+}
+
+.wine__input__button{
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.05;
+    box-sizing: border-box;
+    width: 100%;
+    /* убрали 10% от height и 20 px от height */
+    height: 19%;
+    min-height: 50px;
+    border: none;
+    background-color: #282828;
+    color: #fff;
+    transition: background .1s linear;
+    border: solid 1px #fff;
+}
+.wine__input__button:hover{
+    background-color: #575555;
+    /* color: #000; */
+    cursor: pointer;
+}
+
+/* footer----------------------------------------------------------- */
+.footer{
+    width: 100%;
+    height: 220px;
+    padding: 50px 0;
+    /* margin-top нужен, тк позиция выше имеет position
+    absolute, а из-за блока OVERregistration sector нужно
+    из 770px вычесть высоту блока OVERregistration sector=260px
+    и его margin-top = 60px*/
+    margin-top: 450px;
+    /* чтобы внутренняя часть считалась вместе с border
+    и padding */
+    box-sizing: border-box;
+    background-color: #998431;
+}
+.links{
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    padding: 0 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__link{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+}
+.footer__link:hover{
+    text-decoration: underline;
+}
+.contacts{
+    padding: 0 95px;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    /* единый стиль для текста во всех блоках */
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.contacts__box{
+    width: 25%;
+    border-right: solid 1px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contacts__box:last-child{
+    border-right: none;
+}
+.contacts__text{
+    text-transform: uppercase;
+}
+.contacts__tel{
+    text-decoration: none;
+    color: #fff;
+}
+.contacts__tel:hover{
+    text-decoration: underline;
+}
+/* данный модификатор класса нужен для точечного
+изменения свойств блока */
+.icons{
+    padding: 0 55px;
+}
+.contacts__box__ref{
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* OVERregistration sector----------------------------------------------------------- */
+.over{
+    /* ширина данного блока должна быть чуть больше
+    ширины контейнера на 83px из-за выступов картинок */
+    width: 1282px;
+    height: 260px;
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+.over__img__1{
+    /*z-index - должен быть больше чем у блока, на который
+    мы накладываем данный слой (те на секцию registration)  */
+    z-index: 1500;
+    width: 260px;
+    height: 260px;
+    background-color: rebeccapurple;
+}
+.over__title{
+    box-sizing: border-box;
+    /*z-index - должен быть больше чем у блока, на который
+    мы накладываем данный слой (те на секцию registration)  */
+    z-index: 1500;
+    width: 476px;
+    /* +24px, чтобы сделать padding сверху, а сам блок 74px
+    итого= 24+74 = 98px */
+    padding-top: 24px;
+    height: 98px;
+    /* при данном margin смотриться лучше */
+    margin-top: 6px;
+    background-color: #282828;
+    color: #fff;
+}
+.over__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.over__title__text{
+    font-family: Playfair Display,sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.5;
+}
+.over__img__2{
+    /*z-index - должен быть больше чем у блока, на который
+    мы накладываем данный слой (те на секцию registration)  */
+    z-index: 1500;
+}
